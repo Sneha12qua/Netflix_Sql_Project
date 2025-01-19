@@ -17,22 +17,22 @@ The data for this project is sourced from the Kaggle dataset:
 ## Dataset Link: [Movies Dataset](https://www.kaggle.com/datasets/shivamb/netflix-shows?resource=download)
 
 ## Schema
-DROP TABLE IF EXISTS netflix;
-CREATE TABLE netflix
+Create TAble Netflix
 (
-    show_id      VARCHAR(5),
-    type         VARCHAR(10),
-    title        VARCHAR(250),
-    director     VARCHAR(550),
-    casts        VARCHAR(1050),
-    country      VARCHAR(550),
-    date_added   VARCHAR(55),
-    release_year INT,
-    rating       VARCHAR(15),
-    duration     VARCHAR(15),
-    listed_in    VARCHAR(250),
-    description  VARCHAR(550)
+show_id	Varchar(6),
+type	Varchar(10),
+title	Varchar(150),
+director Varchar(208),	
+casts	Varchar(1000),
+country Varchar(150),
+date_added	Varchar(50),
+release_year Int,	
+rating Varchar(10),	
+duration Varchar(15),	
+listed_in	Varchar(150),
+description Varchar(250)
 );
+
 
 ## Business Problems and Solutions
 1. Count the Number of Movies vs TV Shows
