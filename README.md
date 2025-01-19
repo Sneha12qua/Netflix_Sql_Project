@@ -178,6 +178,7 @@ Objective: Identify the top 10 actors with the most appearances in Indian-produc
 
 15. Categorize Content Based on the Presence of 'Kill' and 'Violence' Keywords
 [SELECT 
+SELECT 
     category,
     COUNT(*) AS content_count
 FROM (
@@ -188,7 +189,7 @@ FROM (
         END AS category
     FROM netflix
 ) AS categorized_content
-GROUP BY category;](https://github.com/najirh/netflix_sql_project?tab=readme-ov-file#1-count-the-number-of-movies-vs-tv-shows:~:text=SELECT%20%0A%20%20%20%20category%2C%0A%20%20%20%20COUNT(*)%20AS%20content_count%0AFROM%20(%0A%20%20%20%20SELECT%20%0A%20%20%20%20%20%20%20%20CASE%20%0A%20%20%20%20%20%20%20%20%20%20%20%20WHEN%20description%20ILIKE%20%27%25kill%25%27%20OR%20description%20ILIKE%20%27%25violence%25%27%20THEN%20%27Bad%27%0A%20%20%20%20%20%20%20%20%20%20%20%20ELSE%20%27Good%27%0A%20%20%20%20%20%20%20%20END%20AS%20category%0A%20%20%20%20FROM%20netflix%0A)%20AS%20categorized_content%0AGROUP%20BY%20category%3B)
+GROUP BY category;
 Objective: Categorize content as 'Bad' if it contains 'kill' or 'violence' and 'Good' otherwise. Count the number of items in each category.
 
 ## Findings and Conclusion
